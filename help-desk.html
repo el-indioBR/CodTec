@@ -9,48 +9,49 @@
     <link rel="stylesheet" href="css/indicacoes.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>PC GURU</title>
+    <title>CODTEC</title>
 </head>
 <style>
-    .btn-pink-moon {
-        background: #ec008c;
-        background: -webkit-linear-gradient(to right, #fc6767, #ec008c);
-        background: linear-gradient(to right, #fc6767, #ec008c);
-        color: #fff;
-        border-radius: 4px solid #eee;
-    }
-
-    .social-link {
-        width: 30px;
-        height: 30px;
-        border: 1px solid #ddd;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #666;
-        border-radius: 50%;
-        transition: all 0.3s;
-        font-size: 0.9rem;
-    }
-
-    .social-link:hover,
-    .social-link:focus {
-        background: #ddd;
-        text-decoration: none;
-        color: #555;
+    .btn-enviar,
+    main {
+        margin: 8px;
     }
 </style>
 
 <body>
     <main>
 
+        <div>
+            <h3 class="text-center text-black modal-title p-3">Entre em contato conosco, <br> nos informe qual é o seu
+                problema</h3>
+        </div>
+
+        <div class="modal fade" id="modalFormHelpDesk" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Solicitação enviada!</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            <label for="exampleFormControlInput1" class="form-label">Endereço de Email</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nome@exemplo.com">
         </div>
         <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <label for="exampleFormControlTextarea1" class="form-label">Descrição</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="7"></textarea>
+        </div>
+
+        <div>
+            <button type="button" style="text-shadow: 0.1em 0.1em 0.2em rgb(167, 166, 166)"
+                class="btn btn-dark text-white btn-enviar" data-bs-toggle="modal" data-bs-target="#modalFormHelpDesk">
+                Enviar
+            </button>
         </div>
 
     </main>
